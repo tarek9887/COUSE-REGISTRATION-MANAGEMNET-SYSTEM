@@ -9,6 +9,7 @@ router.post('/register', registerUser);
 // Login Route
 router.post('/login', loginUser);
 
+
 // ✅ Protected Route (for testing JWT)
 router.get('/protected', authenticateToken, (req, res) => {
   res.json({
