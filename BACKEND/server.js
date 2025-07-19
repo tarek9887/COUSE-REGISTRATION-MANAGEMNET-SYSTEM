@@ -6,6 +6,7 @@ const authRoutes = require('./routes/auth');
 const courseRoutes = require('./routes/course'); // ✅ Move this up (good practice)
 const courseSelectionRoutes = require('./routes/selection');
 const advisorRoutes = require('./routes/advisor');
+const adminRoutes = require('./routes/admin');
 
 const app = express();
 
@@ -17,6 +18,7 @@ app.use('/api/auth', authRoutes);
 app.use('/api/courses', courseRoutes); // ✅ This is correct!
 app.use('/api/selection', courseSelectionRoutes);
 app.use('/advisor', advisorRoutes);
+app.use('/api/admin', adminRoutes);
 
 // Start server
 const PORT = process.env.PORT || 5000;
